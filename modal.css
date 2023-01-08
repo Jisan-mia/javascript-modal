@@ -9,5 +9,34 @@ html {
 }
 
 body {
-
+  background: #ECF1FA;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.primary-button {
+  background-color: #5771EB;
+  color: #F5F7FE;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: #5771EB 0px 12px 28px -15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.primary-button:hover {
+  background-color: #3150e0;
+}
+
+.primary-button:active{
+  transform: scale(0.99);
+}
+
+.primary-button:focus{
+  outline: none;
+}
+
