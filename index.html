@@ -6,15 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript-Modal</title>
   <link rel="stylesheet" href="modal.css">
+  <script src="./modal.js"></script>
 </head>
 <body>
 
   <!-- subscribe button -->
   <div>
-    <button class="open-modal primary-button">Subscribe to our Newsletter</button>
+    <button class="subscribe primary-button">Subscribe to our Newsletter</button>
   </div>
 
 
-  <script src="modal.js"></script>
+  <!-- modal -->
+  <div class="subscribe-wrapper">
+    <div class="subscribe-content">
+      <h2>Be the first to know when new  content is available</h2>
+
+      <p>Sing up to receive tips and tricks on how to create online designs that make people take action</p>
+
+      <form id="subscribe-form">
+        <input placeholder="Your email address" required type="email" name="email" id="emailInput">
+        <input type="submit" value="Sign me up" class="primary-button">
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+      modal('.subscribe', '.subscribe-wrapper', '.subscribe-content', true)
+
+      const subscribeForm = document.querySelector('#subscribe-form')
+      const subWrapper = document.querySelector('.subscribe-wrapper')
+      console.log(subWrapper)
+      subscribeForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        subWrapper.style.display = 'none'
+      })
+
+  </script>
 </body>
 </html>
